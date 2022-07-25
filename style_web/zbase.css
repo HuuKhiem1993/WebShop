@@ -1,0 +1,160 @@
+main { display: block;}h1 { font-size: 2em; margin: 0.67em 0;}pre { font-family: monospace, monospace; font-size: 1em;}a { background-color: transparent;}abbr[title] { border-bottom: none; text-decoration: underline; text-decoration: underline dotted;}b,strong { font-weight: bolder;}code,kbd,samp { font-family: monospace, monospace; font-size: 1em;}small { font-size: 80%;}sub,sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;}sub { bottom: -0.25em;}sup { top: -0.5em;}img { border-style: none;}button,input,optgroup,select { font-family: inherit; font-size: 100%; line-height: 1.15; margin: 0;}button,input { overflow: visible;}button,select { text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] { -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner { border-style: none; padding: 0;}button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring { outline: 1px dotted ButtonText;}fieldset { padding: 0.35em 0.75em 0.625em;}legend { box-sizing: border-box; color: inherit; display: table; max-width: 100%; padding: 0; white-space: normal;}progress { vertical-align: baseline;}[type="checkbox"],[type="radio"] { box-sizing: border-box; padding: 0;}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button { height: auto;}[type="search"] { -webkit-appearance: textfield; outline-offset: -2px;}[type="search"]::-webkit-search-decoration { -webkit-appearance: none;}::-webkit-file-upload-button { -webkit-appearance: button; font: inherit;}details {display: block;}summary {display: list-item;}template {display: none;}[hidden] {display: none;}
+:root{
+  --color-main: blue;
+  --color_border-main: black;
+  --width-tabcontent-left: 25%;
+  --width-tabcontent-center: 50%;
+  --width-tabcontent-right: 25%;
+  --color-start: violet;
+  --color-end: white;
+  --size-icon: 45px;
+  --width-display_left: 20%;
+  --width-display_center: 20%;
+  --width-display_right: 20%;
+}
+*{
+  box-sizing: inherit;
+}
+html{
+  box-sizing: border-box;
+  color: white;
+}
+body{
+  background-color: black;
+  background-size: cover;
+  background-repeat: repeat-y;
+  margin: 0px;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+.bnt{
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 20px;
+  cursor: pointer;
+  text-align: center;
+  border-left: 5px solid;
+  list-style-type: none;
+}
+.tabcontent_left{
+  flex-basis: var(--width-tabcontent-left);
+  height: 100%;
+  border: 2px solid var(--color_border-main); 
+}
+.tabcontent_center{
+  flex-basis: var(--width-tabcontent-center);
+  height: 100%;
+  border: 2px solid var(--color_border-main);
+}
+.tabcontent_right{
+  flex-basis: var(--width-tabcontent-right);
+  height: 100%;
+  border: 2px solid var(--color_border-main);
+}
+.direction_row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.direction_column{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.thongbao{
+  font-size: 20px;
+  position: fixed;
+  bottom: 0px;
+  border-top: 2px solid;
+}
+li a{
+  color: white;
+  text-decoration: none;
+}
+.icon{
+  width: var(--size-icon);
+  height: var(--size-icon);
+  float: right;
+}
+.icon_qr{
+  width: 100px;
+  height: 100px;
+  float: right;
+}
+.videoWrapper {
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  /*height: 0;*/
+  width: 100%;
+  height: 100%;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+.photo{
+  width: 200px;
+}
+.table{
+  border-width: 2px;
+  border-style: solid;
+}
+input{
+  outline: 0px;
+  border-radius: 10px;
+  padding-left: 15px;
+  width: auto;
+}
+input:focus{
+  opacity: 0.9;
+  border: 2px solid red;
+}
+textarea{
+  width: 100%;
+  min-height: 100px;
+  overflow: auto;
+  border-radius: 8px;
+}
+fieldset legend{
+  font-size: 20px;
+}
+.display{
+  display: flex;
+}
+.display .display_left{
+  flex: var(--width-display_left);
+  height: auto;
+}
+.display .display_center{
+  flex: var(--width-display_center);
+  height: auto;
+}
+.display .display_right{
+  flex: var(--width-display_right);
+  height: auto;
+}
+.bnt{
+  border-radius: 8px;
+}
+.bnt:hover{
+  opacity: 0.8;
+  outline: 5px solid red;
+}
+.pointO{
+  position: relative;
+}
+.pointO__content{
+  position: absolute;
+  top: 100%;
+  display: none;
+}
+.pointO:hover .pointO__content{
+  display: block;
+}
+/*css douc tai su dung -user: HuuKhiem (26/7/2022)*/
