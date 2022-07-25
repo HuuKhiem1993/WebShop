@@ -1,0 +1,43 @@
+:root{
+    --width-pointO__content: 200px;
+    --height-pointO__content: calc(var(--width-pointO__content) * 1.5);
+}
+
+.header{
+    height: 20%;
+    position:-webkit-sticky;
+    position:sticky;
+}
+.header__navbar{
+    display: flex;
+    justify-content: space-between;
+    height: calc(40% * auto);
+}
+.pointO{
+    position: relative;
+}
+.pointO__content{
+    position: absolute;
+    top: 100%;
+    display: none;
+}
+.pointO:hover .pointO__content{
+    display: block;
+}
+.header__notyfi{
+
+}
+.header__notyfi--content{
+    
+}
+
+.list{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+.list li{
+    margin: 5px 0px;
+    padding-left: 5px;
+}
