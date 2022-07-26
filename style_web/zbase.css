@@ -2,12 +2,13 @@ main { display: block;}h1 { font-size: 2em; margin: 0.67em 0;}pre { font-family:
 :root{
   --color-main: blue;
   --color_border-main: black;
+  --color-text-main: white;
   --width-tabcontent-left: 25%;
   --width-tabcontent-center: 50%;
   --width-tabcontent-right: 25%;
   --color-start: violet;
   --color-end: white;
-  --size-icon: 45px;
+  --size-icon:  2.5em;
   --width-display_left: 20%;
   --width-display_center: 20%;
   --width-display_right: 20%;
@@ -17,7 +18,7 @@ main { display: block;}h1 { font-size: 2em; margin: 0.67em 0;}pre { font-family:
 }
 html{
   box-sizing: border-box;
-  color: white;
+  color: var(--color-text-main);
 }
 body{
   background-color: black;
@@ -36,6 +37,10 @@ body{
   text-align: center;
   border-left: 5px solid;
   list-style-type: none;
+}
+.bnt:hover{
+  opacity: 0.8;
+  outline: 5px solid red;
 }
 .tabcontent_left{
   flex-basis: var(--width-tabcontent-left);
@@ -69,13 +74,16 @@ body{
   border-top: 2px solid;
 }
 li a{
-  color: white;
+  color: var(--color-text-main);
   text-decoration: none;
 }
 .icon{
   width: var(--size-icon);
   height: var(--size-icon);
   float: right;
+  padding: 2px;
+  margin: 2px;
+  border-radius: 50%;
 }
 .icon_qr{
   width: 100px;
@@ -139,22 +147,45 @@ fieldset legend{
   flex: var(--width-display_right);
   height: auto;
 }
-.bnt{
-  border-radius: 8px;
-}
-.bnt:hover{
-  opacity: 0.8;
-  outline: 5px solid red;
-}
-.pointO{
+.dropdown {
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
-.pointO__content{
-  position: absolute;
-  top: 100%;
-  display: none;
+.dropdown_item{
+  color: var(--color-text-main);
+  font-size: 16px;
+  border: none;
 }
-.pointO:hover .pointO__content{
+.dropdown_content {
+  background-color: rgb(71, 67, 67);
+  opacity: 0.95;
+  margin-top: 100%;
+  min-width: 200px;
+  display: none; 
+  position: absolute; 
+  z-index: 1; 
+  cursor: pointer;
+
+  /*overflow: auto;*/
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
+}
+.dropdown_content::-webkit-scrollbar { /* WebKit */
+  width: 0;
+  height: 0;
+}
+/*sau overflow: auto và ::-webkit-scrollbar được dùng để ẩn thanh cuốn nhưng vẫn cuộn được, cùng tì hiển nó nào*/
+.dropdown_content a {
+  color: var(--color-text-main);;
+  padding: 12px 16px;
+  text-decoration: none;
   display: block;
 }
-/*css douc tai su dung -user: HuuKhiem (26/7/2022)*/
+.dropdown:hover .dropdown_content {
+  display: block;
+  opacity: 0.5;
+}
+
+/*----*/
