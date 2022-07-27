@@ -13,14 +13,33 @@
     justify-content: space-between;
     height: calc(40% * auto);
 }
-
+.header__navbar-item{
+    display: flex;
+}
 .header__notyfi{
-
+    content: "";
 }
 .header__notyfi--content{
-    width: 200px;
-    height: 300px;
+    width: 250px;
+    height: 200px;
 }
+.header__acount{
+    content: "";
+}
+.header__acount-login{
+    content: "";
+}
+.header__acount-register{
+    content: "";
+}
+
+
+
+
+
+
+
+
 
 .list{
     height: auto;
@@ -35,4 +54,5 @@
     padding-left: 5px;
     float: left;
     border-left: 5px solid var(--color-main);
+    text-overflow: clip;
 }
