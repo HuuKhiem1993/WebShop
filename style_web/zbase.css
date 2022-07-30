@@ -3,15 +3,19 @@ main { display: block;}h1 { font-size: 2em; margin: 0.67em 0;}pre { font-family:
   --color-main: blue;
   --color_border-main: black;
   --color-text-main: white;
-  --width-tabcontent-left: 25%;
-  --width-tabcontent-center: 50%;
-  --width-tabcontent-right: 25%;
   --color-start: violet;
   --color-end: white;
   --size-icon:  2.5em;
   --width-display_left: 20%;
-  --width-display_center: 20%;
+  --width-display_center: 60%;
   --width-display_right: 20%;
+  --size-icon_qr: 100px;
+  --size-photo: 200px;
+  --width-__list: 30%;
+  --ration-_list-title: 10%;
+  --ration-__list-list-item: 8%;
+  --height-template_scroll:200px;
+  --width-template_scroll: 200px;
 }
 *{
   box-sizing: inherit;
@@ -28,6 +32,7 @@ body{
   height: 100vh;
   width: 100vw;
   z-index: -1;
+  color: white;
 }
 .bnt{
   text-transform: uppercase;
@@ -40,22 +45,7 @@ body{
 }
 .bnt:hover{
   opacity: 0.8;
-  outline: 5px solid red;
-}
-.tabcontent_left{
-  flex-basis: var(--width-tabcontent-left);
-  height: 100%;
-  border: 2px solid var(--color_border-main); 
-}
-.tabcontent_center{
-  flex-basis: var(--width-tabcontent-center);
-  height: 100%;
-  border: 2px solid var(--color_border-main);
-}
-.tabcontent_right{
-  flex-basis: var(--width-tabcontent-right);
-  height: 100%;
-  border: 2px solid var(--color_border-main);
+  outline: 2px solid red;
 }
 .direction_row{
   display: flex;
@@ -66,12 +56,6 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-}
-.thongbao{
-  font-size: 20px;
-  position: fixed;
-  bottom: 0px;
-  border-top: 2px solid;
 }
 li a{
   color: var(--color-text-main);
@@ -84,30 +68,15 @@ li a{
   padding: 2px;
   margin: 2px;
   border-radius: 50%;
+  background-color: inherit;
 }
 .icon_qr{
-  width: 100px;
-  height: 100px;
+  width: var(--size-icon_qr);
+  /*height: var(--size-icon_qr);*/ /*column bo height*/ 
   float: right;
 }
-.videoWrapper {
-  display: flex;
-  align-items: stretch;
-  position: relative;
-  /*height: 0;*/
-  width: 100%;
-  height: 100%;
-}
-.videoWrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-}
 .photo{
-  width: 200px;
+  width: var(--size-photo);
 }
 .table{
   border-width: 2px;
@@ -134,6 +103,7 @@ fieldset legend{
 }
 .display{
   display: flex;
+  justify-content: space-between;  
 }
 .display .display_left{
   flex: var(--width-display_left);
@@ -148,6 +118,7 @@ fieldset legend{
   height: auto;
 }
 .dropdown {
+
   position: relative;
   display: flex;
   flex-direction: column;
@@ -160,25 +131,41 @@ fieldset legend{
 .dropdown_content {
   background-color: rgb(71, 67, 67);
   opacity: 0.95;
-  margin-top: 100%;
-  min-width: 200px;
+  margin-top: 100%; /*100% "nay" phu thuoc vao cross axits-> anh huong boi flex*/
   display: none; 
   position: absolute; 
   z-index: 1; 
   cursor: pointer;
-
+  /*min-width: 200px;*/ /*doi voi nhung dong code tai su dung khong nen set kich thuoc min, max vi dan den khong set lai kich thuoc vuot pham duoc*/
   /*overflow: auto;*/
+ /* overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none; */
+}
+/*.dropdown_content::-webkit-scrollbar { 
+  width: 0;
+  height: 0;
+}*/
+/*sau overflow: auto và ::-webkit-scrollbar được dùng để ẩn thanh cuốn nhưng vẫn cuộn được, cùng tì hiển nó nào*/
+.template_scroll{
+  height: var(--height-template_scroll);
+  width: var(--width-template_scroll);
+  overflow: auto;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border-radius: 8px;
+}
+.no_scroll{
   overflow-y: scroll;
   scrollbar-width: none;
-  -ms-overflow-style: none; 
+  -ms-overflow-style: none;
 }
-.dropdown_content::-webkit-scrollbar { /* WebKit */
+.no_scroll::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
-/*sau overflow: auto và ::-webkit-scrollbar được dùng để ẩn thanh cuốn nhưng vẫn cuộn được, cùng tì hiển nó nào*/
 .dropdown_content a {
-  color: var(--color-text-main);;
+  color: var(--color-text-main);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -187,18 +174,6 @@ fieldset legend{
   display: block;
   opacity: 0.5;
 }
-.dropdown_contentNotify{
-  position: fixed;
-  display: none;
-  top: 300px;
-  left: 200px;
-  
-}
-.dropdown:focus-visible  .dropdown_contentNotify{
-  display: block;
-  z-index: 10000;
-}
-
 .login{
   display: flex;
   flex-direction: column;
@@ -209,3 +184,90 @@ fieldset legend{
   justify-content: space-between;
 }
 /*----*/
+
+.navbar{
+      position: sticky;
+      flex-direction: row;
+      flex-wrap: wrap;
+      top: 0px;
+      overflow: auto;
+}
+/*part trình bày các phần nội dung link thông qua danh sách và iframe*/
+.display_list_iframe{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+/*part trinh bày list*/
+.__list{
+  display: flex;
+  flex-direction: column;
+  width: var(--width-__list); /*convert cho phu hop voi iframe thoi*/
+  height: 100%;
+}
+.__list-title{
+  display: flex;
+  flex-direction: column;
+  background-color: green;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0px;
+  flex-basis: var(--ration-_list-title);
+}
+.__list-list{
+  background-color: black;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  flex-basis: 100% - var(--ration-_list-title);
+}
+.__list-list-item{
+  width: 100%;
+  min-height: 8%;
+  text-transform: lowercase;
+  padding: 5px 0px 5px 20px;
+  border-color: red;
+  background-color: #201a19;
+  margin: 8px 0px;
+  color: white;
+  border-left: 8px solid var(--color-main);
+  text-decoration: none;
+  text-align: left;
+  position: relative;
+  left: 0px;
+}
+.__list-list-item:hover{
+  opacity: 0.5;
+}
+/**/
+.videoWrapper {
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  /*height: 0;*/
+  width: 100%;
+  height: 100%;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+ul{
+  padding: 0px;
+}
+ul li{
+  text-decoration: none;
+  list-style-type: none;
+}
