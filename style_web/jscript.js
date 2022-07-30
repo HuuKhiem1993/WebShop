@@ -36,3 +36,5 @@ function nameDivice(){
     window.alert(nameMyDivice + " bị hack rồi con!!!");
     window.alert("Giỡn đó baby++");
   }
+
+  

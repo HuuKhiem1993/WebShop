@@ -1,15 +1,17 @@
 :root{
-
+    --ration-header: 12vh;
 }
+
 .web{
     width: 100%;
     height: 100%;
+    position: relative;
 }
 .header{
     position: -webkit-sticky;
     position: sticky;
     width: 100%;
-    height: 12%;
+    height: var(--ration-header);
     display: flex;
     justify-content: space-around;
     align-content: center;
@@ -20,14 +22,27 @@
     flex-direction: row !important;
 }
 .header_center{
-    display: inherit;
+    display: flex;
     justify-content: space-around;
-
 }
 .header_item{
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-    min-width: 50px;
+    min-width: var(--ration-header);
+    display: flex;
+    align-self: center;
+    justify-content: center;
 }
 
+.header_right{
+    display: flex;
+}
+form div+div{
+    margin: 12px 0px;
+}
+.notify{
+    display: flex;
+    justify-content: center;
+    max-width: 700px;
+}

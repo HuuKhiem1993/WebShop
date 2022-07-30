@@ -6,6 +6,7 @@
         <meta charset="utf-8" />
         <link rel="stylesheet" href="/style_web/style.css">
         <link rel="stylesheet" href="/style_web/zbase.css">
+        <link rel="icon" href="\photo_web\logo.png"
         <script src="/style_web/jscript.js" defer></script>
         <title>TestShop</title>
         
@@ -28,20 +29,74 @@
                                 <li class="__list-list-item">assasas</li>
                                 <li class="__list-list-item">assasas</li>
                                 <li class="__list-list-item">assasas</li>
+                                <li class="__list-list-item">assasas</li>
+                                <li class="__list-list-item">assasas</li>
+                                <li class="__list-list-item">assasas</li>
                             </ul>
                         </div>
                     </div>
                     <div class="dropdown">
-                        <p class="dropdown_item header_item ">home</p>
-                        <div class="dropdown_content no_srcoll template_scroll">
+                        <p class="dropdown_item header_item">page</p>
+                        <div class="dropdown_content no_srcoll template_scroll ">
                             <ul>
-                                <li>assasas</li><li>assasas</li><li>assasas</li>
+                                <li class="__list-list-item">assasas</li>
+                                <li class="__list-list-item">assasas</li>
+                                <li class="__list-list-item">assasas</li>
+                                <li class="__list-list-item">assasas</li>
+                                <li class="__list-list-item">assasas</li>
+                                <li class="__list-list-item">assasas</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <p class="dropdown_item header_item">short</p>
+                    </div>
+                    <div>
+                        <img  style="border-radius: 50%; height: 100%;" rel="icon_web" src="\photo_web\logo.png"/>
+                    </div>
+                    <div class="dropdown">
+                        <p class="dropdown_item header_item">page</p>
+                        <div class="dropdown_content no_srcoll template_scroll ">
+                            <ul>
+                                <li class="__list-list-item">assasas</li>
+                                <li class="__list-list-item">assasas</li>
+                                <li class="__list-list-item">assasas</li>
+                                <li class="__list-list-item">assasas</li>
+                                <li class="__list-list-item">assasas</li>
+                                <li class="__list-list-item">assasas</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <p class="dropdown_item header_item">page</p>
+                        <div class="dropdown_content no_srcoll template_scroll ">
+                            <ul>
+                                <li class="__list-list-item">assasas</li>
+                                <li class="__list-list-item">assasas</li>
+                                <li class="__list-list-item">assasas</li>
+                                <li class="__list-list-item">assasas</li>
+                                <li class="__list-list-item">assasas</li>
+                                <li class="__list-list-item">assasas</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <p class="dropdown_item header_item">page</p>
+                        <div class="dropdown_content no_srcoll template_scroll ">
+                            <ul>
+                                <li class="__list-list-item">assasas</li>
+                                <li class="__list-list-item">assasas</li>
+                                <li class="__list-list-item">assasas</li>
+                                <li class="__list-list-item">assasas</li>
+                                <li class="__list-list-item">assasas</li>
+                                <li class="__list-list-item">assasas</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="display_right">
-
+                
+                <div class="display_right header_right">
+                    <p class="dropdown_item header_item" onclick="document.getElementById('notify_Acount').style.display='block'">Acount</p>
                 </div>
             </div>
             
@@ -52,6 +107,35 @@
             <footer>
 
             </footer>
+            <div class="direction_center">
+                <div class="notify" id="notify_Acount" >   
+                    <form set="" action="">
+                        <header style="display: flex; flex-direction: row-reverse;">
+                            
+                            <p class="close" onclick="document.getElementById('notify_Acount').style.display='none'"></p>
+                        </header>
+                        <div>
+                            <label for="Username">UserName:</label>
+                            <input type="text" name="UserName" id="UserName" placeholder="UserName: Nguyen Van A" required/>
+                        </div>
+                        <div>
+                            <label for="PassUser">PassWord</label>
+                            <input type="password" name="PassUser" id="PassUser" placeholder="PassUser" required/>
+                        </div>
+                        <div>
+                            <label for="confirmPass">ConfirmPass</label>
+                            <input type="password" name="confirmPass" id="confirmPass" placeholder="ConfirmPAss" required/>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <div class="bnt" onclick="document.getElementById('notify_Acount').style.display='none'">cancel</div>
+                            <input type="submit">
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+            
         </div>
+        
     </body>
 </html>

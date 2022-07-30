@@ -5,6 +5,10 @@ main { display: block;}h1 { font-size: 2em; margin: 0.67em 0;}pre { font-family:
   --color-text-main: white;
   --color-start: violet;
   --color-end: white;
+  --color-dropdown_content: rgb(0, 166, 249);
+  --color-template_scroll: white;
+  --color-notify: rgb(0, 242, 255);
+
   --size-icon:  2.5em;
   --width-display_left: 20%;
   --width-display_center: 60%;
@@ -16,6 +20,8 @@ main { display: block;}h1 { font-size: 2em; margin: 0.67em 0;}pre { font-family:
   --ration-__list-list-item: 8%;
   --height-template_scroll:200px;
   --width-template_scroll: 200px;
+  
+
 }
 *{
   box-sizing: inherit;
@@ -32,7 +38,7 @@ body{
   height: 100vh;
   width: 100vw;
   z-index: -1;
-  color: white;
+  color: var(--color-text-main);
 }
 .bnt{
   text-transform: uppercase;
@@ -56,6 +62,11 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+.direction_center{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 li a{
   color: var(--color-text-main);
@@ -86,7 +97,7 @@ input{
   outline: 0px;
   border-radius: 10px;
   padding-left: 15px;
-  width: auto;
+  width: 100%;
 }
 input:focus{
   opacity: 0.9;
@@ -100,6 +111,7 @@ textarea{
 }
 fieldset legend{
   font-size: 20px;
+  display: flex;
 }
 .display{
   display: flex;
@@ -118,10 +130,9 @@ fieldset legend{
   height: auto;
 }
 .dropdown {
-
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .dropdown_item{
   color: var(--color-text-main);
@@ -129,8 +140,7 @@ fieldset legend{
   border: none;
 }
 .dropdown_content {
-  background-color: rgb(71, 67, 67);
-  opacity: 0.95;
+  background-color: var(--color-dropdown_content);
   margin-top: 100%; /*100% "nay" phu thuoc vao cross axits-> anh huong boi flex*/
   display: none; 
   position: absolute; 
@@ -150,10 +160,16 @@ fieldset legend{
 .template_scroll{
   height: var(--height-template_scroll);
   width: var(--width-template_scroll);
-  overflow: auto;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--color-template_scroll);
   color: black;
   border-radius: 8px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.template_scroll::-webkit-scrollbar {
+  width: 0 ;
+  height: 0;
 }
 .no_scroll{
   overflow-y: scroll;
@@ -161,7 +177,7 @@ fieldset legend{
   -ms-overflow-style: none;
 }
 .no_scroll::-webkit-scrollbar {
-  width: 0;
+  width: 0 ;
   height: 0;
 }
 .dropdown_content a {
@@ -172,7 +188,7 @@ fieldset legend{
 }
 .dropdown:hover .dropdown_content {
   display: block;
-  opacity: 0.5;
+  opacity: 0.9;
 }
 .login{
   display: flex;
@@ -270,4 +286,27 @@ ul{
 ul li{
   text-decoration: none;
   list-style-type: none;
+}
+.notify{
+  width: 100%;
+  height: 50%;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--color-notify);
+  position: absolute;
+  color: black;
+}
+.close{
+  font-size: 20;
+}
+.close::after{
+  content: "X"
+}
+.close:hover{
+  color: red;
+  outline: 3px solid red;
+  outline-offset: 3px;
+}
+label{
+  font-size: 20px;
 }
