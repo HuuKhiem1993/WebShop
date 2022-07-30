@@ -26,12 +26,12 @@
                         <p class="dropdown_item header_item">home</p>
                         <div class="dropdown_content no_srcoll template_scroll ">
                             <ul>
-                                <li class="__list-list-item">assasas</li>
-                                <li class="__list-list-item">assasas</li>
-                                <li class="__list-list-item">assasas</li>
-                                <li class="__list-list-item">assasas</li>
-                                <li class="__list-list-item">assasas</li>
-                                <li class="__list-list-item">assasas</li>
+                                <li class="__list-list-item left-to-right">assasas</li>
+                                <li class="__list-list-item left-to-right">assasas</li>
+                                <li class="__list-list-item left-to-right">assasas</li>
+                                <li class="__list-list-item left-to-right">assasas</li>
+                                <li class="__list-list-item left-to-right">assasas</li>
+                                <li class="__list-list-item left-to-right">assasas</li>
                             </ul>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
                         <p class="dropdown_item header_item">short</p>
                     </div>
                     <div>
-                        <img  style="border-radius: 50%; height: 100%;" rel="icon_web" src="\photo_web\logo.png"/>
+                        <a rel="home" href=""><img  style="border-radius: 50%; height: 100%;" rel="icon_web" src="\photo_web\logo.png"/></a>
                     </div>
                     <div class="dropdown">
                         <p class="dropdown_item header_item">page</p>
@@ -126,10 +126,14 @@
                             <label for="confirmPass">ConfirmPass</label>
                             <input type="password" name="confirmPass" id="confirmPass" placeholder="ConfirmPAss" required/>
                         </div>
-                        <div style="display: flex; justify-content: space-between;">
-                            <div class="bnt" onclick="document.getElementById('notify_Acount').style.display='none'">cancel</div>
-                            <input type="submit">
-                        </div>
+                        <footer class="direction_column" style="display: flex; align-items: center;">
+                            <div id="bnt_login" onclick="document.getElementById('notify_Acount').style.display='none'" >Login</div>
+                            <div class="direction_row" style="justify-content: space-between;">
+                                <div class="bnt bnt_cancel" style="float: left;" onclick="document.getElementById('notify_Acount').style.display='none'">Cancel</div>
+                                <a class="bnt" rel="" href="">Forget Password ?</a>
+                            </div>
+                            <!--tai sao div thu hai sau id bnt_login lai bi anh huong kich thuoc cua div id bnt_login -->
+                        </footer>
                         
                     </form>
                 </div>

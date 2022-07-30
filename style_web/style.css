@@ -42,7 +42,14 @@ form div+div{
     margin: 12px 0px;
 }
 .notify{
-    display: flex;
+    display: none;
     justify-content: center;
     max-width: 700px;
+    padding: 0px 100px !important;
+}
+form{
+    width: 100%;
+}
+#bnt_login{
+    width: 30%;
 }

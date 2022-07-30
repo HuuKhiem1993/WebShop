@@ -43,30 +43,32 @@ body{
 .bnt{
   text-transform: uppercase;
   text-decoration: none;
-  padding: 20px;
+  padding: 16px;
   cursor: pointer;
   text-align: center;
-  border-left: 5px solid;
   list-style-type: none;
 }
 .bnt:hover{
   opacity: 0.8;
-  outline: 2px solid red;
 }
+
 .direction_row{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  width: 100%;
 }
 .direction_column{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  width: 100%;
 }
 .direction_center{
   display: flex;
   flex-direction: row;
   justify-content: center;
+  width: 100%;
 }
 li a{
   color: var(--color-text-main);
@@ -190,23 +192,13 @@ fieldset legend{
   display: block;
   opacity: 0.9;
 }
-.login{
-  display: flex;
-  flex-direction: column;
-}
-.login_item{
-  content: "";
-  display: flex;
-  justify-content: space-between;
-}
 /*----*/
-
 .navbar{
-      position: sticky;
-      flex-direction: row;
-      flex-wrap: wrap;
-      top: 0px;
-      overflow: auto;
+  position: sticky;
+  flex-direction: row;
+  flex-wrap: wrap;
+  top: 0px;
+  overflow: auto;
 }
 /*part trình bày các phần nội dung link thông qua danh sách và iframe*/
 .display_list_iframe{
@@ -230,7 +222,7 @@ fieldset legend{
   margin-block-start: 0px;
   margin-block-end: 0px;
   width: 100%;
-  align-content: center;
+  align-items: center;
   justify-content: center;
   text-align: center;
   padding: 0px;
@@ -259,10 +251,13 @@ fieldset legend{
   text-align: left;
   position: relative;
   left: 0px;
+  cursor: pointer;
 }
+
 .__list-list-item:hover{
   opacity: 0.5;
 }
+
 /**/
 .videoWrapper {
   display: flex;
@@ -297,10 +292,10 @@ ul li{
   color: black;
 }
 .close{
-  font-size: 20;
+  font-size: 20px;
 }
 .close::after{
-  content: "X"
+  content: "X";
 }
 .close:hover{
   color: red;
@@ -309,4 +304,40 @@ ul li{
 }
 label{
   font-size: 20px;
+}
+#bnt_login{
+  min-width: 100px;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+  text-transform: uppercase;
+  text-shadow: 2px;
+  border: 2px solid red;
+  background-color: inherit;
+  border-radius: 16px;
+  box-shadow: 8px 8px 8px 0 ;
+}
+#bnt_login:hover{
+  opacity: 0.8;
+}
+.bnt_cancel{
+  border-radius: 8px;
+  background-color: rgb(184, 110, 110);
+  color: white;
+}
+a{
+  color: red;
+}
+
+.left-to-right{
+  content: "-";
+  position: relative;
+}
+.left-to-right:hover {
+  animation: hover_L-R 0.5s ease-out forwards;
+}
+@keyframes hover_L-R {
+  from{left: 0px;}
+  to {left: 20px;}
 }
