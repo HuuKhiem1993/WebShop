@@ -37,4 +37,5 @@ function nameDivice(){
     window.alert("Giỡn đó baby++");
   }
 
-  
+  const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+

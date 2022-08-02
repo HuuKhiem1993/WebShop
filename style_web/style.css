@@ -13,13 +13,16 @@
     width: 100%;
     height: var(--ration-header);
     display: flex;
-    justify-content: space-around;
+    justify-content: stretch;
     align-content: center;
     background: rgb(143, 212, 143);
 }
 .header_left{
     display: flex;
     flex-direction: row !important;
+}
+.header_right{
+    display: flex;
 }
 .header_center{
     display: flex;
@@ -33,11 +36,11 @@
     display: flex;
     align-self: center;
     justify-content: center;
+    width: 100%;
+    
 }
 
-.header_right{
-    display: flex;
-}
+
 form div+div{
     margin: 12px 0px;
 }
@@ -52,4 +55,23 @@ form{
 }
 #bnt_login{
     width: 30%;
+}
+
+hr{
+    height: 5px;
+    background-color: white;
+}
+
+.meomeo{
+
+}
+.card{ /*set lai cai cua fw*/
+    color: black;
+    position: static;
+}
+.nav-link:hover{
+    background: var(--color-main);
+}
+.nav-link .active{
+    background: var(--color-main);
 }

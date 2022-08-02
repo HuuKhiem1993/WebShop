@@ -4,15 +4,18 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta charset="utf-8" />
+        <link rel="stylesheet" href="/style_web/bootstrap.min.css">
         <link rel="stylesheet" href="/style_web/style.css">
         <link rel="stylesheet" href="/style_web/zbase.css">
-        <link rel="icon" href="\photo_web\logo.png"
+        <link rel="icon" href="\photo_web\logo.png">
         <script src="/style_web/jscript.js" defer></script>
+        <script src="/style_web/bootstrap.min.js" defer></script>
         <title>TestShop</title>
         
     </head>
     <body>
         <div class="web">
+
             <div class="header display">
                 <div class="display_left header_left">
                     <div class="contactNow dropdown">
@@ -21,73 +24,39 @@
                     </div>
                     
                 </div>
-                <div class="display_center header_center">
-                    <div class="dropdown">
-                        <p class="dropdown_item header_item">home</p>
-                        <div class="dropdown_content no_srcoll template_scroll ">
-                            <ul>
-                                <li class="__list-list-item left-to-right">assasas</li>
-                                <li class="__list-list-item left-to-right">assasas</li>
-                                <li class="__list-list-item left-to-right">assasas</li>
-                                <li class="__list-list-item left-to-right">assasas</li>
-                                <li class="__list-list-item left-to-right">assasas</li>
-                                <li class="__list-list-item left-to-right">assasas</li>
-                            </ul>
-                        </div>
+
+                <div class="display_center header_center" id="nav-tab" role="tablist">
+                    <div class="display_center_center nav-link active" data-bs-toggle="tab" role="tab" aria-selected="true" type="button"
+                        id="nav-home-tab" data-bs-target="#nav-home" aria-controls="nav-home">
+                        <p class="header_item">home</p>
+                        
                     </div>
-                    <div class="dropdown">
-                        <p class="dropdown_item header_item">page</p>
-                        <div class="dropdown_content no_srcoll template_scroll ">
-                            <ul>
-                                <li class="__list-list-item">assasas</li>
-                                <li class="__list-list-item">assasas</li>
-                                <li class="__list-list-item">assasas</li>
-                                <li class="__list-list-item">assasas</li>
-                                <li class="__list-list-item">assasas</li>
-                                <li class="__list-list-item">assasas</li>
-                            </ul>
-                        </div>
+                    <div class="display_center_center nav-link" data-bs-toggle="tab" role="tab" aria-selected="false" type="button"
+                        id="nav-MeoMeo-tab" data-bs-target="#nav-MeoMeo" aria-controls="nav-MeoMeo">
+                        <p class="header_item">MeoMeo</p>
+                        
                     </div>
-                    <div class="dropdown">
-                        <p class="dropdown_item header_item">short</p>
+                    <div class="display_center_center nav-link" data-bs-toggle="tab" role="tab" aria-selected="false" type="button"
+                        id="nav-short-tab" data-bs-target="#nav-short" aria-controls="nav-short">
+                        <p class="header_item">short</p>
                     </div>
                     <div>
                         <a rel="home" href=""><img  style="border-radius: 50%; height: 100%;" rel="icon_web" src="\photo_web\logo.png"/></a>
                     </div>
-                    <div class="dropdown">
-                        <p class="dropdown_item header_item">page</p>
-                        <div class="dropdown_content no_srcoll template_scroll ">
-                            <ul>
-                                <li class="__list-list-item">assasas</li>
-                                <li class="__list-list-item">assasas</li>
-                                <li class="__list-list-item">assasas</li>
-                                <li class="__list-list-item">assasas</li>
-                                <li class="__list-list-item">assasas</li>
-                                <li class="__list-list-item">assasas</li>
-                            </ul>
-                        </div>
+                    <div class="display_center_center nav-link" data-bs-toggle="tab" role="tab" aria-selected="false" type="button"
+                        id="nav-Product-tab" data-bs-target="#nav-Product" aria-controls="nav-Product">
+                        <p class="header_item">Product</p>
+                        
+                    </div>
+                    <div class="display_center_center nav-link" data-bs-toggle="tab" role="tab" aria-selected="false" type="button"
+                        id="nav-page-tab" data-bs-target="#nav-page" aria-controls="nav-page">
+                        <p class="header_item">page</p>
+                        
                     </div>
                     <div class="dropdown">
-                        <p class="dropdown_item header_item">page</p>
+                        <p class="dropdown_item header_item">dropdown</p>
                         <div class="dropdown_content no_srcoll template_scroll ">
                             <ul>
-                                <li class="__list-list-item">assasas</li>
-                                <li class="__list-list-item">assasas</li>
-                                <li class="__list-list-item">assasas</li>
-                                <li class="__list-list-item">assasas</li>
-                                <li class="__list-list-item">assasas</li>
-                                <li class="__list-list-item">assasas</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <p class="dropdown_item header_item">page</p>
-                        <div class="dropdown_content no_srcoll template_scroll ">
-                            <ul>
-                                <li class="__list-list-item">assasas</li>
-                                <li class="__list-list-item">assasas</li>
-                                <li class="__list-list-item">assasas</li>
-                                <li class="__list-list-item">assasas</li>
                                 <li class="__list-list-item">assasas</li>
                                 <li class="__list-list-item">assasas</li>
                             </ul>
@@ -99,15 +68,8 @@
                     <p class="dropdown_item header_item" onclick="document.getElementById('notify_Acount').style.display='block'">Acount</p>
                 </div>
             </div>
-            
-            <div class="bodyer">
-
-            </div>
-            
-            <footer>
-
-            </footer>
-            <div class="direction_center">
+            <!--doan ma login-->
+            <div class="direction_center ">
                 <div class="notify" id="notify_Acount" >   
                     <form set="" action="">
                         <header style="display: flex; flex-direction: row-reverse;">
@@ -138,8 +100,115 @@
                     </form>
                 </div>
             </div>
+            <!--end login-->
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">...</div>
+                <div class="tab-pane fade" id="nav-MeoMeo" role="tabpanel" aria-labelledby="nav-MeoMeo-tab" tabindex="0"><div class="bodyer ">
+
+                    <div class="meomeo direction_row" >
+                        <div class="card" style="width: 18rem;">
+                            <img src="/photo_web/MEO6.jfif" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <p class="card-text">Khai ra mau, vao day lam gi</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="/photo_web/MEO2.jfif" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <p class="card-text">WOW, com quang</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Item #1
+                                </button>
+                              </h2>
+                              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Sao nào, thật za mình hết ý tưởng rồi nên xài bootstrap thoy.</div>
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                Item #2
+                                </button>
+                              </h2>
+                              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Một con zị xòe ra hai cái cánh, nó kê rằng, anh yêu em, love love love...</div>
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                Item #3
+                                </button>
+                              </h2>
+                              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+                <div class="tab-pane fade" id="nav-short" role="tabpanel" aria-labelledby="nav-short-tab" tabindex="0">...</div>
+                <div class="tab-pane fade" id="nav-Product" role="tabpanel" aria-labelledby="nav-Product-tab" tabindex="0">...</div>
+                <div class="tab-pane fade" id="nav-page" role="tabpanel" aria-labelledby="nav-page-tab" tabindex="0">...</div>
+                <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">...</div>
+                
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             
+            <hr/>
+            <footer class="display direction_row">
+                <div class="display_left">
+                    <h3>Contact</h3>
+                </div>
+                <div class="display_center">
+                    
+
+                </div>
+                <div class="display_right">
+
+                </div>
+            </footer>
         </div>
-        
     </body>
 </html>
+
+<!--
+
+    <div class="dropdown">
+                        <p class="dropdown_item header_item">page</p>
+                        <div class="dropdown_content no_srcoll template_scroll ">
+                            <ul>
+                                <li class="__list-list-item">assasas</li>
+                            </ul>
+                        </div>
+                    </div>
+-->

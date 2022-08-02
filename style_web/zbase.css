@@ -146,7 +146,7 @@ fieldset legend{
   margin-top: 100%; /*100% "nay" phu thuoc vao cross axits-> anh huong boi flex*/
   display: none; 
   position: absolute; 
-  z-index: 1; 
+  z-index: 1000000;
   cursor: pointer;
   /*min-width: 200px;*/ /*doi voi nhung dong code tai su dung khong nen set kich thuoc min, max vi dan den khong set lai kich thuoc vuot pham duoc*/
   /*overflow: auto;*/
@@ -191,6 +191,7 @@ fieldset legend{
 .dropdown:hover .dropdown_content {
   display: block;
   opacity: 0.9;
+  
 }
 /*----*/
 .navbar{
@@ -288,8 +289,10 @@ ul li{
   padding: 20px;
   border-radius: 8px;
   background-color: var(--color-notify);
+  /*position: absolute;*/
   position: absolute;
   color: black;
+  z-index: 1002;
 }
 .close{
   font-size: 20px;
@@ -340,4 +343,9 @@ a{
 @keyframes hover_L-R {
   from{left: 0px;}
   to {left: 20px;}
+}
+.display_center_center{
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
